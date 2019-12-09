@@ -10,11 +10,17 @@ echo "***************************************************"
 echo "***************************************************"
 echo "****Removendo a instalação existente****"
 sleep 5
-apt-get remove openvpn* -y
+apt-get remove openvpn -y
 sleep 5
-apt-get purge openvpn* -y
+apt-get purge openvpn -y
 sleep 5
-apt-get autoremove openvpn* -y
+apt-get autoremove openvpn -y
+sleep 3
+apt-get remove postgresql -y
+sleep
+apt-get purge postgresql -y
+sleep 3
+apt-get autoremove postgresql -y
 sleep 3
 apt-get update && apt-get -y upgrade 
 sleep 10
@@ -39,6 +45,10 @@ sleep 3
 cd /etc/init.d
 sleep 3
 chmod 755 start-openvpn.sh
+sleep 3
+apt-get install postgresql -y
+sleep 3
+/etc/init.d/postgresql stop
 sleep 3
 update-rc.d start-openvpn.sh defaults
 sleep 5
