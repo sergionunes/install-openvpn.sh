@@ -6,7 +6,7 @@ echo "***************************************************"
 	echo "Finalidade.: Inicir o Serviço da VPN"
 	echo "Dt.Criação.: 02/12/2019"
 echo "***************************************************"
-openvpn --config /etc/openvpn/sergio.mac-config.conf &
+openvpn --config /etc/openvpn/df_bio_biomundo_vtf_prd11-config.conf &
 sleep 3
 sudo /etc/init.d/itec-appserver start
 sleep 3
