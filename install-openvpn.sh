@@ -54,7 +54,7 @@ update-rc.d start-openvpn.sh defaults
 sleep 5
 reboot
 sleep 5
-ping 10.101.1.8
+echo ping 10.128.1.1
 echo '******************************************'
 echo    'Instalação Finalizada com sucesso!'
 echo '******************************************'

@@ -7,4 +7,8 @@ echo "***************************************************"
 	echo "Dt.Criação.: 02/12/2019"
 echo "***************************************************"
 openvpn --config /etc/openvpn/sergio.mac-config.conf &
+sleep 3
+sudo /etc/init.d/itec-appserver start
+sleep 3
+sudo /etc/init.d/postgresql start 
 sleep 20
